@@ -2,11 +2,11 @@
 """Annotated function zoom_array that takes a tuple lst of floats
     as argument and returns a tuple of zoomed in floats."""
 
-from typing import Tuple
+from typing import Tuple, List, Iterable
 
 
-def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
-    zoomed_in: Tuple = [
+def zoom_array(lst: Iterable, factor: int = 2) -> List:
+    zoomed_in: List = [
         item for item in lst
         for i in range(int(factor))
     ]
@@ -15,6 +15,6 @@ def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
 
 array = [12, 72, 91]
 
-zoom_2x = zoom_array(array)
+zoom_2x = zoom_array(tuple(array), 2)
 
-zoom_3x = zoom_array(array, 3.0)
+zoom_3x = zoom_array(tuple(array), 3.0)
