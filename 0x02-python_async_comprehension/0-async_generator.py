@@ -11,6 +11,7 @@ loop 10 times, each time asynchronously wait
 import asyncio
 import random
 
+
 async def async_generator() -> any:
     """
     The coroutine will loop 10 times, each time asynchronously wait
